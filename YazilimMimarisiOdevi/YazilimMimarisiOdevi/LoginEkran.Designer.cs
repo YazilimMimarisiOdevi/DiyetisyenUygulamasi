@@ -103,6 +103,7 @@ namespace YazilimMimarisiOdevi
             this.btnGiris.TabIndex = 5;
             this.btnGiris.Text = "Giriş";
             this.btnGiris.UseVisualStyleBackColor = false;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // LoginEkran
             // 

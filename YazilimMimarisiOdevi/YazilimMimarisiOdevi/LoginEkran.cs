@@ -43,6 +43,12 @@ namespace YazilimMimarisiOdevi
             hareket = false;
         }
 
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            DiyetisyenEkran diyetisyen_ekran = new DiyetisyenEkran();
+            diyetisyen_ekran.Show();
+        }
+
         private void LoginEkrani_MouseMove(object sender, MouseEventArgs e)
         {
             if (hareket)

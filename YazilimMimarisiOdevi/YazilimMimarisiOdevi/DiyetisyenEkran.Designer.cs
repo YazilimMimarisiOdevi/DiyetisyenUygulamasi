@@ -37,6 +37,7 @@ namespace YazilimMimarisiOdevi
             this.cmbHastalik = new System.Windows.Forms.ComboBox();
             this.lblHastalik = new System.Windows.Forms.Label();
             this.txtTCNo = new System.Windows.Forms.TextBox();
+            this.btnHastaEkle = new System.Windows.Forms.Button();
             this.txtSoyisim = new System.Windows.Forms.TextBox();
             this.txtIsim = new System.Windows.Forms.TextBox();
             this.cmbDiyet = new System.Windows.Forms.ComboBox();
@@ -44,10 +45,14 @@ namespace YazilimMimarisiOdevi
             this.lblTCNo = new System.Windows.Forms.Label();
             this.lblSoyisim = new System.Windows.Forms.Label();
             this.lblIsim = new System.Windows.Forms.Label();
-            this.btnHastaEkle = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxRapor = new System.Windows.Forms.GroupBox();
+            this.cdrDiyetTakvim = new System.Windows.Forms.MonthCalendar();
+            this.lblDiyetBaslangic = new System.Windows.Forms.Label();
+            this.lblBaslangic = new System.Windows.Forms.Label();
+            this.lblDiyetBitis = new System.Windows.Forms.Label();
+            this.lblBitis = new System.Windows.Forms.Label();
             this.gbxHastaEkleme.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbxRapor.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCikis
@@ -56,7 +61,7 @@ namespace YazilimMimarisiOdevi
             this.btnCikis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCikis.BackgroundImage")));
             this.btnCikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCikis.Location = new System.Drawing.Point(984, 12);
+            this.btnCikis.Location = new System.Drawing.Point(1142, 12);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(34, 34);
             this.btnCikis.TabIndex = 0;
@@ -68,9 +73,9 @@ namespace YazilimMimarisiOdevi
             this.gbxHastaBilgileri.BackColor = System.Drawing.Color.Transparent;
             this.gbxHastaBilgileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbxHastaBilgileri.ForeColor = System.Drawing.Color.LimeGreen;
-            this.gbxHastaBilgileri.Location = new System.Drawing.Point(20, 29);
+            this.gbxHastaBilgileri.Location = new System.Drawing.Point(20, 43);
             this.gbxHastaBilgileri.Name = "gbxHastaBilgileri";
-            this.gbxHastaBilgileri.Size = new System.Drawing.Size(436, 220);
+            this.gbxHastaBilgileri.Size = new System.Drawing.Size(504, 333);
             this.gbxHastaBilgileri.TabIndex = 1;
             this.gbxHastaBilgileri.TabStop = false;
             this.gbxHastaBilgileri.Text = "Hasta Bilgileri";
@@ -80,9 +85,9 @@ namespace YazilimMimarisiOdevi
             this.gbxDiyetBilgileri.BackColor = System.Drawing.Color.Transparent;
             this.gbxDiyetBilgileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbxDiyetBilgileri.ForeColor = System.Drawing.Color.LimeGreen;
-            this.gbxDiyetBilgileri.Location = new System.Drawing.Point(20, 255);
+            this.gbxDiyetBilgileri.Location = new System.Drawing.Point(20, 382);
             this.gbxDiyetBilgileri.Name = "gbxDiyetBilgileri";
-            this.gbxDiyetBilgileri.Size = new System.Drawing.Size(436, 144);
+            this.gbxDiyetBilgileri.Size = new System.Drawing.Size(504, 201);
             this.gbxDiyetBilgileri.TabIndex = 2;
             this.gbxDiyetBilgileri.TabStop = false;
             this.gbxDiyetBilgileri.Text = "Diyet Bilgileri";
@@ -90,6 +95,11 @@ namespace YazilimMimarisiOdevi
             // gbxHastaEkleme
             // 
             this.gbxHastaEkleme.BackColor = System.Drawing.Color.Transparent;
+            this.gbxHastaEkleme.Controls.Add(this.lblBitis);
+            this.gbxHastaEkleme.Controls.Add(this.lblDiyetBitis);
+            this.gbxHastaEkleme.Controls.Add(this.lblBaslangic);
+            this.gbxHastaEkleme.Controls.Add(this.lblDiyetBaslangic);
+            this.gbxHastaEkleme.Controls.Add(this.cdrDiyetTakvim);
             this.gbxHastaEkleme.Controls.Add(this.cmbHastalik);
             this.gbxHastaEkleme.Controls.Add(this.lblHastalik);
             this.gbxHastaEkleme.Controls.Add(this.txtTCNo);
@@ -103,9 +113,9 @@ namespace YazilimMimarisiOdevi
             this.gbxHastaEkleme.Controls.Add(this.lblIsim);
             this.gbxHastaEkleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbxHastaEkleme.ForeColor = System.Drawing.Color.LimeGreen;
-            this.gbxHastaEkleme.Location = new System.Drawing.Point(713, 87);
+            this.gbxHastaEkleme.Location = new System.Drawing.Point(765, 87);
             this.gbxHastaEkleme.Name = "gbxHastaEkleme";
-            this.gbxHastaEkleme.Size = new System.Drawing.Size(281, 411);
+            this.gbxHastaEkleme.Size = new System.Drawing.Size(378, 601);
             this.gbxHastaEkleme.TabIndex = 2;
             this.gbxHastaEkleme.TabStop = false;
             this.gbxHastaEkleme.Text = "Hasta Ekleme";
@@ -114,16 +124,16 @@ namespace YazilimMimarisiOdevi
             // 
             this.cmbHastalik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbHastalik.FormattingEnabled = true;
-            this.cmbHastalik.Location = new System.Drawing.Point(104, 225);
+            this.cmbHastalik.Location = new System.Drawing.Point(104, 179);
             this.cmbHastalik.Name = "cmbHastalik";
-            this.cmbHastalik.Size = new System.Drawing.Size(154, 28);
+            this.cmbHastalik.Size = new System.Drawing.Size(234, 28);
             this.cmbHastalik.TabIndex = 12;
             // 
             // lblHastalik
             // 
             this.lblHastalik.AutoSize = true;
             this.lblHastalik.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHastalik.Location = new System.Drawing.Point(7, 224);
+            this.lblHastalik.Location = new System.Drawing.Point(7, 178);
             this.lblHastalik.Name = "lblHastalik";
             this.lblHastalik.Size = new System.Drawing.Size(92, 25);
             this.lblHastalik.TabIndex = 11;
@@ -132,41 +142,53 @@ namespace YazilimMimarisiOdevi
             // txtTCNo
             // 
             this.txtTCNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTCNo.Location = new System.Drawing.Point(104, 177);
+            this.txtTCNo.Location = new System.Drawing.Point(104, 135);
             this.txtTCNo.Name = "txtTCNo";
-            this.txtTCNo.Size = new System.Drawing.Size(154, 26);
+            this.txtTCNo.Size = new System.Drawing.Size(234, 26);
             this.txtTCNo.TabIndex = 10;
+            // 
+            // btnHastaEkle
+            // 
+            this.btnHastaEkle.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnHastaEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHastaEkle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHastaEkle.Location = new System.Drawing.Point(245, 525);
+            this.btnHastaEkle.Name = "btnHastaEkle";
+            this.btnHastaEkle.Size = new System.Drawing.Size(93, 58);
+            this.btnHastaEkle.TabIndex = 3;
+            this.btnHastaEkle.Text = "Hasta Ekleme";
+            this.btnHastaEkle.UseVisualStyleBackColor = false;
             // 
             // txtSoyisim
             // 
             this.txtSoyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSoyisim.Location = new System.Drawing.Point(104, 129);
+            this.txtSoyisim.Location = new System.Drawing.Point(104, 91);
             this.txtSoyisim.Name = "txtSoyisim";
-            this.txtSoyisim.Size = new System.Drawing.Size(154, 26);
+            this.txtSoyisim.Size = new System.Drawing.Size(234, 26);
             this.txtSoyisim.TabIndex = 9;
             // 
             // txtIsim
             // 
             this.txtIsim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtIsim.Location = new System.Drawing.Point(104, 81);
+            this.txtIsim.Location = new System.Drawing.Point(104, 44);
             this.txtIsim.Name = "txtIsim";
-            this.txtIsim.Size = new System.Drawing.Size(154, 26);
+            this.txtIsim.Size = new System.Drawing.Size(234, 26);
             this.txtIsim.TabIndex = 8;
             // 
             // cmbDiyet
             // 
             this.cmbDiyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbDiyet.FormattingEnabled = true;
-            this.cmbDiyet.Location = new System.Drawing.Point(104, 273);
+            this.cmbDiyet.Location = new System.Drawing.Point(104, 223);
             this.cmbDiyet.Name = "cmbDiyet";
-            this.cmbDiyet.Size = new System.Drawing.Size(154, 28);
+            this.cmbDiyet.Size = new System.Drawing.Size(234, 28);
             this.cmbDiyet.TabIndex = 7;
             // 
             // lblDiyet
             // 
             this.lblDiyet.AutoSize = true;
             this.lblDiyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDiyet.Location = new System.Drawing.Point(31, 272);
+            this.lblDiyet.Location = new System.Drawing.Point(31, 222);
             this.lblDiyet.Name = "lblDiyet";
             this.lblDiyet.Size = new System.Drawing.Size(67, 25);
             this.lblDiyet.TabIndex = 6;
@@ -176,7 +198,7 @@ namespace YazilimMimarisiOdevi
             // 
             this.lblTCNo.AutoSize = true;
             this.lblTCNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTCNo.Location = new System.Drawing.Point(18, 176);
+            this.lblTCNo.Location = new System.Drawing.Point(18, 134);
             this.lblTCNo.Name = "lblTCNo";
             this.lblTCNo.Size = new System.Drawing.Size(81, 25);
             this.lblTCNo.TabIndex = 5;
@@ -186,7 +208,7 @@ namespace YazilimMimarisiOdevi
             // 
             this.lblSoyisim.AutoSize = true;
             this.lblSoyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoyisim.Location = new System.Drawing.Point(6, 128);
+            this.lblSoyisim.Location = new System.Drawing.Point(7, 90);
             this.lblSoyisim.Name = "lblSoyisim";
             this.lblSoyisim.Size = new System.Drawing.Size(92, 25);
             this.lblSoyisim.TabIndex = 4;
@@ -196,37 +218,72 @@ namespace YazilimMimarisiOdevi
             // 
             this.lblIsim.AutoSize = true;
             this.lblIsim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIsim.Location = new System.Drawing.Point(40, 80);
+            this.lblIsim.Location = new System.Drawing.Point(40, 43);
             this.lblIsim.Name = "lblIsim";
             this.lblIsim.Size = new System.Drawing.Size(58, 25);
             this.lblIsim.TabIndex = 3;
             this.lblIsim.Text = "İsim :";
             // 
-            // btnHastaEkle
+            // gbxRapor
             // 
-            this.btnHastaEkle.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnHastaEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHastaEkle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHastaEkle.Location = new System.Drawing.Point(165, 323);
-            this.btnHastaEkle.Name = "btnHastaEkle";
-            this.btnHastaEkle.Size = new System.Drawing.Size(93, 58);
-            this.btnHastaEkle.TabIndex = 3;
-            this.btnHastaEkle.Text = "Hasta Ekleme";
-            this.btnHastaEkle.UseVisualStyleBackColor = false;
+            this.gbxRapor.BackColor = System.Drawing.Color.Transparent;
+            this.gbxRapor.Controls.Add(this.gbxHastaBilgileri);
+            this.gbxRapor.Controls.Add(this.gbxDiyetBilgileri);
+            this.gbxRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gbxRapor.ForeColor = System.Drawing.Color.LimeGreen;
+            this.gbxRapor.Location = new System.Drawing.Point(32, 87);
+            this.gbxRapor.Name = "gbxRapor";
+            this.gbxRapor.Size = new System.Drawing.Size(704, 601);
+            this.gbxRapor.TabIndex = 3;
+            this.gbxRapor.TabStop = false;
+            this.gbxRapor.Text = "Rapor";
             // 
-            // groupBox1
+            // cdrDiyetTakvim
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.gbxHastaBilgileri);
-            this.groupBox1.Controls.Add(this.gbxDiyetBilgileri);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.groupBox1.Location = new System.Drawing.Point(32, 87);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(643, 411);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Rapor";
+            this.cdrDiyetTakvim.Location = new System.Drawing.Point(104, 263);
+            this.cdrDiyetTakvim.Name = "cdrDiyetTakvim";
+            this.cdrDiyetTakvim.TabIndex = 0;
+            this.cdrDiyetTakvim.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.cdrDiyetTakvim_DateChanged);
+            // 
+            // lblDiyetBaslangic
+            // 
+            this.lblDiyetBaslangic.AutoSize = true;
+            this.lblDiyetBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDiyetBaslangic.Location = new System.Drawing.Point(6, 446);
+            this.lblDiyetBaslangic.Name = "lblDiyetBaslangic";
+            this.lblDiyetBaslangic.Size = new System.Drawing.Size(126, 20);
+            this.lblDiyetBaslangic.TabIndex = 13;
+            this.lblDiyetBaslangic.Text = "Diyet Başlangıç :";
+            // 
+            // lblBaslangic
+            // 
+            this.lblBaslangic.AutoSize = true;
+            this.lblBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBaslangic.Location = new System.Drawing.Point(138, 446);
+            this.lblBaslangic.Name = "lblBaslangic";
+            this.lblBaslangic.Size = new System.Drawing.Size(177, 20);
+            this.lblBaslangic.TabIndex = 14;
+            this.lblBaslangic.Text = "..........................................";
+            // 
+            // lblDiyetBitis
+            // 
+            this.lblDiyetBitis.AutoSize = true;
+            this.lblDiyetBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDiyetBitis.Location = new System.Drawing.Point(45, 481);
+            this.lblDiyetBitis.Name = "lblDiyetBitis";
+            this.lblDiyetBitis.Size = new System.Drawing.Size(87, 20);
+            this.lblDiyetBitis.TabIndex = 15;
+            this.lblDiyetBitis.Text = "Diyet Bitiş :";
+            // 
+            // lblBitis
+            // 
+            this.lblBitis.AutoSize = true;
+            this.lblBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBitis.Location = new System.Drawing.Point(138, 481);
+            this.lblBitis.Name = "lblBitis";
+            this.lblBitis.Size = new System.Drawing.Size(177, 20);
+            this.lblBitis.TabIndex = 16;
+            this.lblBitis.Text = "..........................................";
             // 
             // DiyetisyenEkran
             // 
@@ -234,8 +291,8 @@ namespace YazilimMimarisiOdevi
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1030, 554);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1188, 721);
+            this.Controls.Add(this.gbxRapor);
             this.Controls.Add(this.gbxHastaEkleme);
             this.Controls.Add(this.btnCikis);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -247,7 +304,7 @@ namespace YazilimMimarisiOdevi
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DiyetisyenEkran_MouseUp);
             this.gbxHastaEkleme.ResumeLayout(false);
             this.gbxHastaEkleme.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.gbxRapor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -269,6 +326,11 @@ namespace YazilimMimarisiOdevi
         private System.Windows.Forms.Label lblDiyet;
         private System.Windows.Forms.ComboBox cmbHastalik;
         private System.Windows.Forms.Label lblHastalik;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxRapor;
+        private System.Windows.Forms.MonthCalendar cdrDiyetTakvim;
+        private System.Windows.Forms.Label lblBitis;
+        private System.Windows.Forms.Label lblDiyetBitis;
+        private System.Windows.Forms.Label lblBaslangic;
+        private System.Windows.Forms.Label lblDiyetBaslangic;
     }
 }
