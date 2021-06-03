@@ -37,10 +37,11 @@ namespace YazilimMimarisiOdevi
             hareket = false;
         }
 
-        private void cdrDiyetTakvim_DateChanged(object sender, DateRangeEventArgs e)
+        private void btnHastaEkleme_Click(object sender, EventArgs e)
         {
-            lblBaslangic.Text=e.Start.ToLongDateString();
-            lblBitis.Text=e.End.ToLongDateString();
+            this.Hide();
+            HastaEklemeEkran hasta_ekleme = new HastaEklemeEkran();
+            hasta_ekleme.Show();
         }
 
         private void DiyetisyenEkran_MouseMove(object sender, MouseEventArgs e)

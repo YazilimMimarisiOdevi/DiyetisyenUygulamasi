@@ -58,6 +58,12 @@
     <Compile Include="DiyetisyenEkran.Designer.cs">
       <DependentUpon>DiyetisyenEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="HastaEklemeEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaEklemeEkran.Designer.cs">
+      <DependentUpon>HastaEklemeEkran.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginEkran.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DiyetisyenEkran.resx">
       <DependentUpon>DiyetisyenEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaEklemeEkran.resx">
+      <DependentUpon>HastaEklemeEkran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginEkran.resx">
       <DependentUpon>LoginEkran.cs</DependentUpon>
