@@ -1,0 +1,12 @@
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\bin\Debug\YazilimMimarisiOdevi.exe.config
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\bin\Debug\YazilimMimarisiOdevi.exe
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\bin\Debug\YazilimMimarisiOdevi.pdb
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.csprojAssemblyReference.cache
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.Properties.Resources.resources
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.csproj.GenerateResource.cache
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.csproj.CoreCompileInputs.cache
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.exe
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.pdb
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.DiyetisyenEkran.resources
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.LoginEkran.resources
+C:\Users\becau\Desktop\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.AdminEkran.resources
