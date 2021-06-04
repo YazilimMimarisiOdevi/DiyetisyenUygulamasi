@@ -16,7 +16,7 @@ namespace YazilimMimarisiOdevi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginEkran());
+            Application.Run(new frmGirisEkran());
         }
     }
 }

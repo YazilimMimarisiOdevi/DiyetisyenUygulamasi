@@ -23,3 +23,16 @@ C:\Users\becau\Desktop\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisi
 C:\Users\becau\Desktop\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.exe
 C:\Users\becau\Desktop\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.pdb
 C:\Users\becau\Desktop\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.HastaEklemeEkran.resources
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\bin\Debug\YazilimMimarisiOdevi.exe.config
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\bin\Debug\YazilimMimarisiOdevi.exe
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\bin\Debug\YazilimMimarisiOdevi.pdb
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.csprojAssemblyReference.cache
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.Properties.Resources.resources
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.csproj.GenerateResource.cache
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.csproj.CoreCompileInputs.cache
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.exe
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.pdb
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.frmAdminEkran.resources
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.frmDiyetisyenEkran.resources
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.frmHastaEklemeEkran.resources
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.frmGirisEkran.resources

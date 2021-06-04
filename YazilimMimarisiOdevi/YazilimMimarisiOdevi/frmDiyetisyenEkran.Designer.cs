@@ -1,7 +1,7 @@
 ﻿
 namespace YazilimMimarisiOdevi
 {
-    partial class DiyetisyenEkran
+    partial class frmDiyetisyenEkran
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace YazilimMimarisiOdevi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiyetisyenEkran));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiyetisyenEkran));
             this.btnCikis = new System.Windows.Forms.Button();
             this.gbxHastaBilgileri = new System.Windows.Forms.GroupBox();
             this.lblHastalikGoster = new System.Windows.Forms.Label();
@@ -292,7 +292,7 @@ namespace YazilimMimarisiOdevi
             this.btnHastaEkleme.UseVisualStyleBackColor = false;
             this.btnHastaEkleme.Click += new System.EventHandler(this.btnHastaEkleme_Click);
             // 
-            // DiyetisyenEkran
+            // frmDiyetisyenEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -303,7 +303,7 @@ namespace YazilimMimarisiOdevi
             this.Controls.Add(this.gbxRapor);
             this.Controls.Add(this.btnCikis);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DiyetisyenEkran";
+            this.Name = "frmDiyetisyenEkran";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AnaEkran";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DiyetisyenEkran_MouseDown);

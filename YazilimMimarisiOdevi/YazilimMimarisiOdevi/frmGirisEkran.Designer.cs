@@ -1,7 +1,7 @@
 ﻿
 namespace YazilimMimarisiOdevi
 {
-    partial class LoginEkran
+    partial class frmGirisEkran
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -29,12 +29,12 @@ namespace YazilimMimarisiOdevi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginEkran));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGirisEkran));
             this.btnCikis = new System.Windows.Forms.Button();
             this.lblIsim = new System.Windows.Forms.Label();
             this.lblSifre = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtIsim = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -75,22 +75,22 @@ namespace YazilimMimarisiOdevi
             this.lblSifre.TabIndex = 2;
             this.lblSifre.Text = "Şifre :";
             // 
-            // txtUsername
+            // txtIsim
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUsername.Location = new System.Drawing.Point(135, 257);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(206, 27);
-            this.txtUsername.TabIndex = 3;
+            this.txtIsim.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtIsim.Location = new System.Drawing.Point(135, 257);
+            this.txtIsim.Name = "txtIsim";
+            this.txtIsim.Size = new System.Drawing.Size(206, 27);
+            this.txtIsim.TabIndex = 3;
             // 
-            // txtPassword
+            // txtSifre
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPassword.Location = new System.Drawing.Point(135, 341);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(206, 27);
-            this.txtPassword.TabIndex = 4;
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Location = new System.Drawing.Point(135, 341);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '●';
+            this.txtSifre.Size = new System.Drawing.Size(206, 27);
+            this.txtSifre.TabIndex = 4;
             // 
             // btnGiris
             // 
@@ -106,7 +106,7 @@ namespace YazilimMimarisiOdevi
             this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
-            // LoginEkran
+            // frmGirisEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,20 +114,18 @@ namespace YazilimMimarisiOdevi
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(375, 518);
             this.Controls.Add(this.btnGiris);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtIsim);
             this.Controls.Add(this.lblSifre);
             this.Controls.Add(this.lblIsim);
             this.Controls.Add(this.btnCikis);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoginEkran";
+            this.Name = "GirisEkran";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.LoginEkrani_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginEkrani_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginEkrani_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LoginEkrani_MouseUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmGirisEkran_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmGirisEkran_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmGirisEkran_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,8 +136,8 @@ namespace YazilimMimarisiOdevi
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Label lblIsim;
         private System.Windows.Forms.Label lblSifre;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtIsim;
+        private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Button btnGiris;
     }
 }

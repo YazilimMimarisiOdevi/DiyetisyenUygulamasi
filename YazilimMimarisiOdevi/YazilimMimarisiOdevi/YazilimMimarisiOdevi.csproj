@@ -46,43 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminEkran.cs">
+    <Compile Include="frmAdminEkran.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminEkran.Designer.cs">
-      <DependentUpon>AdminEkran.cs</DependentUpon>
+    <Compile Include="frmAdminEkran.Designer.cs">
+      <DependentUpon>frmAdminEkran.cs</DependentUpon>
     </Compile>
-    <Compile Include="DiyetisyenEkran.cs">
+    <Compile Include="frmDiyetisyenEkran.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DiyetisyenEkran.Designer.cs">
-      <DependentUpon>DiyetisyenEkran.cs</DependentUpon>
+    <Compile Include="frmDiyetisyenEkran.Designer.cs">
+      <DependentUpon>frmDiyetisyenEkran.cs</DependentUpon>
     </Compile>
-    <Compile Include="HastaEklemeEkran.cs">
+    <Compile Include="frmHastaEklemeEkran.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HastaEklemeEkran.Designer.cs">
-      <DependentUpon>HastaEklemeEkran.cs</DependentUpon>
+    <Compile Include="frmHastaEklemeEkran.Designer.cs">
+      <DependentUpon>frmHastaEklemeEkran.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginEkran.cs">
+    <Compile Include="frmGirisEkran.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginEkran.Designer.cs">
-      <DependentUpon>LoginEkran.cs</DependentUpon>
+    <Compile Include="frmGirisEkran.Designer.cs">
+      <DependentUpon>frmGirisEkran.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminEkran.resx">
-      <DependentUpon>AdminEkran.cs</DependentUpon>
+    <EmbeddedResource Include="frmAdminEkran.resx">
+      <DependentUpon>frmAdminEkran.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DiyetisyenEkran.resx">
-      <DependentUpon>DiyetisyenEkran.cs</DependentUpon>
+    <EmbeddedResource Include="frmDiyetisyenEkran.resx">
+      <DependentUpon>frmDiyetisyenEkran.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HastaEklemeEkran.resx">
-      <DependentUpon>HastaEklemeEkran.cs</DependentUpon>
+    <EmbeddedResource Include="frmHastaEklemeEkran.resx">
+      <DependentUpon>frmHastaEklemeEkran.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginEkran.resx">
-      <DependentUpon>LoginEkran.cs</DependentUpon>
+    <EmbeddedResource Include="frmGirisEkran.resx">
+      <DependentUpon>frmGirisEkran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

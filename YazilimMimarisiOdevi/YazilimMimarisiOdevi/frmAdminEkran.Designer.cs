@@ -1,7 +1,7 @@
 ﻿
 namespace YazilimMimarisiOdevi
 {
-    partial class AdminEkran
+    partial class frmAdminEkran
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace YazilimMimarisiOdevi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminEkran));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminEkran));
             this.btnCikis = new System.Windows.Forms.Button();
             this.gbxDiyetisyenEkleme = new System.Windows.Forms.GroupBox();
             this.btnDiyetisyenEkleme = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@ namespace YazilimMimarisiOdevi
             this.btnCikis.Size = new System.Drawing.Size(34, 34);
             this.btnCikis.TabIndex = 0;
             this.btnCikis.UseVisualStyleBackColor = false;
-            this.btnCikis.Click += new System.EventHandler(this.button1_Click);
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // gbxDiyetisyenEkleme
             // 

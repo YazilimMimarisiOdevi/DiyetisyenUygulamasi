@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YazilimMimarisiOdevi
 {
-    public partial class HastaEklemeEkran : Form
+    public partial class frmHastaEklemeEkran : Form
     {
-        public HastaEklemeEkran()
+        public frmHastaEklemeEkran()
         {
             InitializeComponent();
         }
@@ -45,7 +45,7 @@ namespace YazilimMimarisiOdevi
         private void btnGeri_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DiyetisyenEkran diyetisyen_ekran = new DiyetisyenEkran();
+            frmDiyetisyenEkran diyetisyen_ekran = new frmDiyetisyenEkran();
             diyetisyen_ekran.Show();
         }
 

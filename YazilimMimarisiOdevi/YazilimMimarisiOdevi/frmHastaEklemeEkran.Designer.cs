@@ -1,7 +1,7 @@
 ﻿
 namespace YazilimMimarisiOdevi
 {
-    partial class HastaEklemeEkran
+    partial class frmHastaEklemeEkran
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace YazilimMimarisiOdevi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HastaEklemeEkran));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHastaEklemeEkran));
             this.gbxHastaEkleme = new System.Windows.Forms.GroupBox();
             this.lblDiyetBitisGoster = new System.Windows.Forms.Label();
             this.lblDiyetBitis = new System.Windows.Forms.Label();
