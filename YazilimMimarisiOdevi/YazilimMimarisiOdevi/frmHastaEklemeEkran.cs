@@ -49,10 +49,6 @@ namespace YazilimMimarisiOdevi
             diyetisyen_ekran.Show();
         }
 
-        private void cdrDiyetTakvim_DateChanged(object sender, DateRangeEventArgs e)
-        {        
-            lblDiyetBaslangicGoster.Text = e.Start.ToLongDateString();
-            lblDiyetBitisGoster.Text = e.End.ToLongDateString();    
-        }
+
     }
 }
