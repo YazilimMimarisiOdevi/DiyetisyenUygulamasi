@@ -17,27 +17,32 @@ namespace YazilimMimarisiOdevi
         {
             InitializeComponent();
         }
+        //Veritabanina baglanti kodu olusutruldu.
+        SqlConnection con = new SqlConnection(@"Data Source=.\;Initial Catalog=diyUy;Integrated Security=True");
+        //Veritabanina komut yazma kodu olusuturldu.
+        SqlCommand cmd = new SqlCommand();
+        //Veritabanindan veri okuma kodu olusturuldu.
+        SqlDataReader dr;
 
-        //Sql veritabanina baglanti saglama stringi.
-        private string connStr = @"Data Source=.\;Initial Catalog=diyUy;Integrated Security=True";
-
+        //Hasta ekleme formunda ortak kullanilan degiskenler olusturuldu.
         private int kisiID;
         private string hastalikID = null;
 
         private void frmHastaEklemeEkran_Load(object sender, EventArgs e)
         {
+            //Hasta ekleme formu her acildiginda hastalik combobox'i guncelleyici fonksiyon cagirildi.
             HastalikCmbGuncelle();
         }
 
         void HastalikCmbGuncelle()
         {
-            SqlConnection con = new SqlConnection(connStr);
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
             //Hastalik adlarini listeleyen komut yazildi.
             cmd.CommandText = "SELECT H.HastalikAdi FROM tblHastalik H";
+            //Sql'e baglanti saglandi.
             cmd.Connection = con;
+            //Sql'e baglanti acildi.
             con.Open();
+            //Komut calistirildi ve veri okuyucuya esitlendi.x
             dr = cmd.ExecuteReader();
 
             while(dr.Read())
@@ -45,14 +50,12 @@ namespace YazilimMimarisiOdevi
                 //Hastalik adlari combobox'a yazdirildi.
                 cmbHastalik.Items.Add(dr["HastalikAdi"]);
             }
+            //Sql'e baglanti kapandi.
             con.Close();
         }
 
         private void cmbHastalik_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(connStr);
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
             //Secilen hastalik tipinin id'sini bulan komut yazildi.
             cmd.CommandText = "SELECT H.HastalikID FROM tblHastalik H WHERE H.HastalikAdi = '" + cmbHastalik.Text + "'";
             cmd.Connection = con;
@@ -71,14 +74,12 @@ namespace YazilimMimarisiOdevi
         {
             try
             {
-                SqlConnection con = new SqlConnection(connStr);
-                SqlCommand cmd = new SqlCommand();
-                SqlDataReader dr;
                 //Hastanin bilgilerini olusturma komutu yazildi.
                 cmd.CommandText = "INSERT INTO tblKisi (Isim, Soyisim, TCNo, HastalikID, AktifDiyet)" +
                                               "VALUES (@Isim,@Soyisim,@TCNo,@HastalikID,@AktifDiyet)";
                 cmd.Connection = con;
                 con.Open();
+
                 //Hastanin bilgileri veritabanina aktarildi.
                 cmd.Parameters.AddWithValue("Isim", txtIsim.Text);
                 cmd.Parameters.AddWithValue("Soyisim", txtSoyisim.Text);
@@ -88,10 +89,10 @@ namespace YazilimMimarisiOdevi
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-
-                con.Open();
+                
                 //Hastanin TC numarasindan KisiID'sini bulma komutu yazildi.
                 cmd.CommandText = "SELECT K.KisiID FROM tblKisi K WHERE K.TCNo = '" + txtTCNo.Text + "'";
+                con.Open();
                 dr = cmd.ExecuteReader();
 
                 if (dr.Read())
@@ -101,10 +102,11 @@ namespace YazilimMimarisiOdevi
                 }
                 con.Close();
 
-                con.Open();
                 //Hastanin kisi tipi olusturma komutu yazildi.
                 cmd.CommandText = "INSERT INTO tblKisiTipi (KisiTipiID, KisiTipiAdi, KisiID)" +
                                                   "VALUES (@KisiTipiID,@KisiTipiAdi,@KisiID)";
+                con.Open();
+
                 //Hastanin kisi tipi bilgileri veritabanina aktarildi.
                 cmd.Parameters.AddWithValue("KisiTipiID", "3");
                 cmd.Parameters.AddWithValue("KisiTipiAdi", "Hasta");
@@ -113,6 +115,8 @@ namespace YazilimMimarisiOdevi
                 con.Close();
 
                 MessageBox.Show("Hasta ekleme islemi basari ile gerceklesti.\nDiyetisyen ekranina aktariliyorsunuz...");
+                
+                //Diyetisyen formuna gidildi.
                 frmDiyetisyenEkran formDiyetisyenEkran = new frmDiyetisyenEkran();
                 formDiyetisyenEkran.Show();
                 this.Hide();
@@ -124,8 +128,11 @@ namespace YazilimMimarisiOdevi
             }
         }
 
+        //Formun hareket etmesini saglayici degiskenler olusturuldu.
         bool hareket;
         int fare_x, fare_y;
+
+        //Formun hareket etmesini saglayan fonksiyonlar olusturuldu.
         private void HastaEklemeEkran_MouseDown(object sender, MouseEventArgs e)
         {
             hareket = true;
@@ -146,6 +153,7 @@ namespace YazilimMimarisiOdevi
 
         private void btnGeri_Click(object sender, EventArgs e)
         {
+            //Diyetisyen formuna gidildi.
             frmDiyetisyenEkran formDiyetisyenEkran = new frmDiyetisyenEkran();
             formDiyetisyenEkran.Show();
             this.Hide();
@@ -153,6 +161,7 @@ namespace YazilimMimarisiOdevi
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
+            //Uygulama kapatildi.
             Application.Exit();
         }
 
