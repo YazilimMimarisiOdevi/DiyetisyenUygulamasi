@@ -50,3 +50,6 @@ C:\Users\becau\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\Yazili
 C:\Users\becau\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.exe
 C:\Users\becau\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.pdb
 C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.frmRaporAlEkran.resources
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.csproj.CopyComplete

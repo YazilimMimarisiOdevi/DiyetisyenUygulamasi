@@ -23,15 +23,18 @@ namespace YazilimMimarisiOdevi
 
         private void btnHTMLRapor_Click(object sender, EventArgs e)
         {
-            //RaporBilgisi sinifi tipinde degisken olusturuldu.
-            RaporBilgisi bilgi = new RaporBilgisi();
+            //RaporBilgisiKisisel sinifi tipinde degisken olusturuldu.
+            RaporBilgisiKisisel bilgiKisisel = new RaporBilgisiKisisel();
+            //RaporBilgisiDiyet sinifi tipinde degisken olusturuldu.
+            RaporBilgisiDiyet bilgiDiyet = new RaporBilgisiDiyet();
+
             //Hastanin kisiID'sini bulma fonksiyonu cagirildi.
             HastaBilgiAl();
             //KisiID'si bulunan hastanin kisiID'si RaporBilgisi sinifindan kisiID degiskenine aktarildi.
-            bilgi.kisiID = this.kisiID;
+            bilgiKisisel.kisiID = this.kisiID;
 
-            //Rapor olusturma sinifi olusturuldu ve bilgi degiskeni parametre olarak gonderildi.
-            RaporOlusturmaTabani Olusturucu = new HTMLRaporOlusturma(bilgi);
+            //Rapor olusturma sinifi olusturuldu ve bilgi degiskenleri parametre olarak gonderildi.
+            RaporOlusturmaTabani Olusturucu = new HTMLRaporOlusturma(bilgiKisisel, bilgiDiyet);
             //Rapor yonetici sinifi olusturuldu ve rapor olusturm sinifinin degiskeni parametre olarak gonderildi.
             RaporYoneticisi raporYoneticisi = new RaporYoneticisi(Olusturucu);
 
@@ -48,16 +51,19 @@ namespace YazilimMimarisiOdevi
                 str = raporYoneticisi.TerstenOlustur();
             }
 
+            //Html dosyasi olusturuldu.
             string dosyaYolu = "HTMLRapor.html";
-
+            
             File.WriteAllText(dosyaYolu, string.Empty);
-
+            //Dosya yazici modda acildi.
             FileStream fileStream = new FileStream(dosyaYolu, FileMode.OpenOrCreate, FileAccess.Write);
             using (StreamWriter writer = new StreamWriter(fileStream, Encoding.UTF8))
             {
+                //Dosyaya yazma kodu yazildi.
                 writer.WriteLine(str);
                 writer.Close();
             }
+            //Dosya kapandi.
             fileStream.Close();
 
             MessageBox.Show("Rapor HTML formatinda olusturuldu.");
@@ -65,15 +71,18 @@ namespace YazilimMimarisiOdevi
 
         private void btnJSONRapor_Click(object sender, EventArgs e)
         {
-            //RaporBilgisi sinifi tipinde degisken olusturuldu.
-            RaporBilgisi bilgi = new RaporBilgisi();
+            //RaporBilgisiKisisel sinifi tipinde degisken olusturuldu.
+            RaporBilgisiKisisel bilgiKisisel = new RaporBilgisiKisisel();
+            //RaporBilgisiDiyet sinifi tipinde degisken olusturuldu.
+            RaporBilgisiDiyet bilgiDiyet = new RaporBilgisiDiyet();
+
             //Hastanin kisiID'sini bulma fonksiyonu cagirildi.
             HastaBilgiAl();
             //KisiID'si bulunan hastanin kisiID'si RaporBilgisi sinifindan kisiID degiskenine aktarildi.
-            bilgi.kisiID = this.kisiID;
+            bilgiKisisel.kisiID = this.kisiID;
 
-            //Rapor olusturma sinifi olusturuldu ve bilgi degiskeni parametre olarak gonderildi.
-            RaporOlusturmaTabani Olusturucu = new HTMLRaporOlusturma(bilgi);
+            //Rapor olusturma sinifi olusturuldu ve bilgi degiskenleri parametre olarak gonderildi.
+            RaporOlusturmaTabani Olusturucu = new JSONRaporOlusturma(bilgiKisisel, bilgiDiyet);
             //Rapor yonetici sinifi olusturuldu ve rapor olusturm sinifinin degiskeni parametre olarak gonderildi.
             RaporYoneticisi raporYoneticisi = new RaporYoneticisi(Olusturucu);
 
@@ -90,16 +99,19 @@ namespace YazilimMimarisiOdevi
                 str = raporYoneticisi.TerstenOlustur();
             }
 
+            //Json dosyasi olusturuldu.
             string dosyaYolu = "JSONRapor.json";
 
             File.WriteAllText(dosyaYolu, string.Empty);
-
+            //Dosya yazici modda acildi.
             FileStream fileStream = new FileStream(dosyaYolu, FileMode.OpenOrCreate, FileAccess.Write);
             using (StreamWriter writer = new StreamWriter(fileStream, Encoding.UTF8))
             {
+                //Dosyaya yazma kodu yazildi.
                 writer.WriteLine(str);
                 writer.Close();
             }
+            //Dosya kapandi.
             fileStream.Close();
 
             MessageBox.Show("Rapor JSON formatinda olusturuldu.");
