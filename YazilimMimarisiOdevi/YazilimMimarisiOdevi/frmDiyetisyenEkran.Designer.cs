@@ -60,6 +60,7 @@ namespace YazilimMimarisiOdevi
             this.lblHastaTCNo = new System.Windows.Forms.Label();
             this.btnHastayiGoster = new System.Windows.Forms.Button();
             this.btnHastaEkleme = new System.Windows.Forms.Button();
+            this.btnRaporAl = new System.Windows.Forms.Button();
             this.gbxHastaBilgileri.SuspendLayout();
             this.gbxDiyetBilgileri.SuspendLayout();
             this.gbxRapor.SuspendLayout();
@@ -76,7 +77,7 @@ namespace YazilimMimarisiOdevi
             this.btnCikis.Location = new System.Drawing.Point(892, 12);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(34, 34);
-            this.btnCikis.TabIndex = 0;
+            this.btnCikis.TabIndex = 8;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
@@ -93,7 +94,7 @@ namespace YazilimMimarisiOdevi
             this.gbxHastaBilgileri.Controls.Add(this.lblIsim);
             this.gbxHastaBilgileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbxHastaBilgileri.ForeColor = System.Drawing.Color.LimeGreen;
-            this.gbxHastaBilgileri.Location = new System.Drawing.Point(20, 43);
+            this.gbxHastaBilgileri.Location = new System.Drawing.Point(20, 29);
             this.gbxHastaBilgileri.Name = "gbxHastaBilgileri";
             this.gbxHastaBilgileri.Size = new System.Drawing.Size(453, 240);
             this.gbxHastaBilgileri.TabIndex = 1;
@@ -183,7 +184,7 @@ namespace YazilimMimarisiOdevi
             this.gbxDiyetBilgileri.Controls.Add(this.lblAktifDiyet);
             this.gbxDiyetBilgileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbxDiyetBilgileri.ForeColor = System.Drawing.Color.LimeGreen;
-            this.gbxDiyetBilgileri.Location = new System.Drawing.Point(20, 289);
+            this.gbxDiyetBilgileri.Location = new System.Drawing.Point(20, 275);
             this.gbxDiyetBilgileri.Name = "gbxDiyetBilgileri";
             this.gbxDiyetBilgileri.Size = new System.Drawing.Size(453, 374);
             this.gbxDiyetBilgileri.TabIndex = 2;
@@ -261,7 +262,7 @@ namespace YazilimMimarisiOdevi
             this.gbxRapor.ForeColor = System.Drawing.Color.LimeGreen;
             this.gbxRapor.Location = new System.Drawing.Point(12, 12);
             this.gbxRapor.Name = "gbxRapor";
-            this.gbxRapor.Size = new System.Drawing.Size(867, 687);
+            this.gbxRapor.Size = new System.Drawing.Size(867, 667);
             this.gbxRapor.TabIndex = 3;
             this.gbxRapor.TabStop = false;
             this.gbxRapor.Text = "Rapor";
@@ -276,7 +277,7 @@ namespace YazilimMimarisiOdevi
             this.gbxHastaGuncelleme.Controls.Add(this.btnHastayiGuncelle);
             this.gbxHastaGuncelleme.Controls.Add(this.lblGuncellemeTCNo);
             this.gbxHastaGuncelleme.ForeColor = System.Drawing.Color.LimeGreen;
-            this.gbxHastaGuncelleme.Location = new System.Drawing.Point(479, 289);
+            this.gbxHastaGuncelleme.Location = new System.Drawing.Point(479, 275);
             this.gbxHastaGuncelleme.Name = "gbxHastaGuncelleme";
             this.gbxHastaGuncelleme.Size = new System.Drawing.Size(367, 374);
             this.gbxHastaGuncelleme.TabIndex = 4;
@@ -297,7 +298,7 @@ namespace YazilimMimarisiOdevi
             this.cmbDiyet.Location = new System.Drawing.Point(88, 87);
             this.cmbDiyet.Name = "cmbDiyet";
             this.cmbDiyet.Size = new System.Drawing.Size(238, 28);
-            this.cmbDiyet.TabIndex = 19;
+            this.cmbDiyet.TabIndex = 4;
             this.cmbDiyet.SelectedIndexChanged += new System.EventHandler(this.cmbDiyet_SelectedIndexChanged);
             // 
             // lblDiyet
@@ -316,7 +317,7 @@ namespace YazilimMimarisiOdevi
             this.txtGuncellemeTCNo.Location = new System.Drawing.Point(88, 48);
             this.txtGuncellemeTCNo.Name = "txtGuncellemeTCNo";
             this.txtGuncellemeTCNo.Size = new System.Drawing.Size(238, 26);
-            this.txtGuncellemeTCNo.TabIndex = 16;
+            this.txtGuncellemeTCNo.TabIndex = 3;
             // 
             // btnHastayiGuncelle
             // 
@@ -326,7 +327,7 @@ namespace YazilimMimarisiOdevi
             this.btnHastayiGuncelle.Location = new System.Drawing.Point(220, 303);
             this.btnHastayiGuncelle.Name = "btnHastayiGuncelle";
             this.btnHastayiGuncelle.Size = new System.Drawing.Size(106, 62);
-            this.btnHastayiGuncelle.TabIndex = 15;
+            this.btnHastayiGuncelle.TabIndex = 5;
             this.btnHastayiGuncelle.Text = "Hastayı Güncelle";
             this.btnHastayiGuncelle.UseVisualStyleBackColor = false;
             this.btnHastayiGuncelle.Click += new System.EventHandler(this.btnHastayiGuncelle_Click);
@@ -347,7 +348,7 @@ namespace YazilimMimarisiOdevi
             this.gbxHasta.Controls.Add(this.lblHastaTCNo);
             this.gbxHasta.Controls.Add(this.btnHastayiGoster);
             this.gbxHasta.ForeColor = System.Drawing.Color.LimeGreen;
-            this.gbxHasta.Location = new System.Drawing.Point(479, 43);
+            this.gbxHasta.Location = new System.Drawing.Point(479, 29);
             this.gbxHasta.Name = "gbxHasta";
             this.gbxHasta.Size = new System.Drawing.Size(367, 240);
             this.gbxHasta.TabIndex = 3;
@@ -360,7 +361,7 @@ namespace YazilimMimarisiOdevi
             this.txtTCNo.Location = new System.Drawing.Point(124, 93);
             this.txtTCNo.Name = "txtTCNo";
             this.txtTCNo.Size = new System.Drawing.Size(202, 26);
-            this.txtTCNo.TabIndex = 14;
+            this.txtTCNo.TabIndex = 1;
             // 
             // lblHastaTCNo
             // 
@@ -379,7 +380,7 @@ namespace YazilimMimarisiOdevi
             this.btnHastayiGoster.Location = new System.Drawing.Point(220, 164);
             this.btnHastayiGoster.Name = "btnHastayiGoster";
             this.btnHastayiGoster.Size = new System.Drawing.Size(106, 62);
-            this.btnHastayiGoster.TabIndex = 12;
+            this.btnHastayiGoster.TabIndex = 2;
             this.btnHastayiGoster.Text = "Hastayı Göster";
             this.btnHastayiGoster.UseVisualStyleBackColor = false;
             this.btnHastayiGoster.Click += new System.EventHandler(this.btnHastayiGoster_Click);
@@ -390,13 +391,27 @@ namespace YazilimMimarisiOdevi
             this.btnHastaEkleme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHastaEkleme.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHastaEkleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnHastaEkleme.Location = new System.Drawing.Point(701, 705);
+            this.btnHastaEkleme.Location = new System.Drawing.Point(701, 703);
             this.btnHastaEkleme.Name = "btnHastaEkleme";
             this.btnHastaEkleme.Size = new System.Drawing.Size(116, 58);
-            this.btnHastaEkleme.TabIndex = 4;
+            this.btnHastaEkleme.TabIndex = 6;
             this.btnHastaEkleme.Text = "Hasta Ekleme";
             this.btnHastaEkleme.UseVisualStyleBackColor = false;
             this.btnHastaEkleme.Click += new System.EventHandler(this.btnHastaEkleme_Click);
+            // 
+            // btnRaporAl
+            // 
+            this.btnRaporAl.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnRaporAl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRaporAl.Location = new System.Drawing.Point(259, 703);
+            this.btnRaporAl.Name = "btnRaporAl";
+            this.btnRaporAl.Size = new System.Drawing.Size(116, 58);
+            this.btnRaporAl.TabIndex = 7;
+            this.btnRaporAl.Text = "Rapor Al";
+            this.btnRaporAl.UseVisualStyleBackColor = false;
+            this.btnRaporAl.Click += new System.EventHandler(this.btnRaporAl_Click);
             // 
             // frmDiyetisyenEkran
             // 
@@ -405,6 +420,7 @@ namespace YazilimMimarisiOdevi
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(938, 788);
+            this.Controls.Add(this.btnRaporAl);
             this.Controls.Add(this.btnHastaEkleme);
             this.Controls.Add(this.gbxRapor);
             this.Controls.Add(this.btnCikis);
@@ -413,9 +429,9 @@ namespace YazilimMimarisiOdevi
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AnaEkran";
             this.Load += new System.EventHandler(this.frmDiyetisyenEkran_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DiyetisyenEkran_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DiyetisyenEkran_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DiyetisyenEkran_MouseUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmDiyetisyenEkran_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmDiyetisyenEkran_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmDiyetisyenEkran_MouseUp);
             this.gbxHastaBilgileri.ResumeLayout(false);
             this.gbxHastaBilgileri.PerformLayout();
             this.gbxDiyetBilgileri.ResumeLayout(false);
@@ -461,5 +477,6 @@ namespace YazilimMimarisiOdevi
         private System.Windows.Forms.MonthCalendar cdrDiyetTakvim;
         private System.Windows.Forms.ComboBox cmbDiyet;
         private System.Windows.Forms.Label lblDiyet;
+        private System.Windows.Forms.Button btnRaporAl;
     }
 }

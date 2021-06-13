@@ -18,7 +18,6 @@ namespace YazilimMimarisiOdevi
         {
             InitializeComponent();
         }
-
         //Sql veritabanina baglanti saglama stringi.
         private string connStr = @"Data Source=.\;Initial Catalog=diyUy;Integrated Security=True";
 
@@ -28,40 +27,74 @@ namespace YazilimMimarisiOdevi
             SqlConnection con = new SqlConnection(connStr);
             //Sql'e yeni komut olusturuldu.
             SqlCommand cmd = new SqlCommand();
-            //Diyetisyen formu olusturuldu.
-            frmDiyetisyenEkran formDiyetisyenEkran = new frmDiyetisyenEkran();
             //Veriyi okuyucu olusturuldu.
             SqlDataReader dr;
 
-            //Sql baglantisi acildi.
-            con.Open();
+            //Kullanicinin kisi id'si ve kisi tipi id'si icin degiskenler olusturuldu.
+            int kisiID = 0;
+            int kisiTipiID = 0;
+
+            //Kullanicinin isim ve sifresinin dogru olup olmadigini ve kisiID'si bulma komutu yazildi.
+            cmd.CommandText = "SELECT K.KisiID, K.Isim, K.Soyisim FROM tblKisi K " +
+                              "WHERE K.Isim = '" + txtIsim.Text + "' AND K.Sifre = '" + txtSifre.Text + "'";
             //Sql ile baglanti saglandi.
             cmd.Connection = con;
-            //Kullanicinin isim ve sifresinin dogru olup olmadigini sorgulama komutu yazildi.
-            cmd.CommandText = "SELECT K.Isim, K.Sifre FROM tblKisi K " +
-                              "WHERE K.Isim = '" + txtIsim.Text + "' AND K.Sifre = '" + txtSifre.Text + "'";
+            //Sql baglantisi acildi.
+            con.Open();
             //Komut calistirildi ve veri okuyucuya esitlendi.
             dr = cmd.ExecuteReader();
             //Veri okuyucu true (yani isim ve sifre dogru) iken calisan kosul olusturuldu.
             if(dr.Read())
             {
-                MessageBox.Show("Giriş yapılıyor.");
-                //Diyetisyen formu acildi.
-                formDiyetisyenEkran.Show();
-                //Suanki form kapandi.
-                this.Hide();
+                //Kullanicinin kisiID'si kisiID degiskenine aktarildi.
+                kisiID = Convert.ToInt32(dr["KisiID"]);
             }
             else
             {
-                //Islem basarisiz oldugu icin ekrana bildirim atildi.
-                MessageBox.Show("İsim ve şifrenizi kontrol ediniz.");
+                MessageBox.Show("Hatalı giriş yapıldı!!\nİsim ve şifrenizi kontrol ediniz.");
             }
             //Sql'e baglanti kapatildi.
             con.Close();
+
+            //KisiID'sinden kisiTipi bulma komutu yazildi.
+            cmd.CommandText = "SELECT KT.KisiTipiID FROM tblKisiTipi KT " +
+                              "WHERE KT.KisiID = '" + kisiID + "'";
+            con.Open();
+            dr = cmd.ExecuteReader();
+            if(dr.Read())
+            {
+                //KisiTipiID'si kisiTipiID degiskenine aktarildi.
+                kisiTipiID = Convert.ToInt32(dr["KisiTipiID"]);
+            }
+            con.Close();
+
+            //Eger kullanici 1 tipinde (yani admin tipi) ise admin formuna giris yapildi.
+            if(kisiTipiID == 1)
+            {
+                frmAdminEkran formAdminEkran = new frmAdminEkran();
+
+                MessageBox.Show("Admin girişi yapılıyor.");
+                //Admin formuna gidildi.
+                formAdminEkran.Show();
+                this.Hide();
+            }
+            //Eger kullanici 2 tipinde (yani diyetisyen tipi) ise diyetisyen formuna giris yapildi.
+            else if(kisiTipiID == 2)
+            {
+                frmDiyetisyenEkran formDiyetisyenEkran = new frmDiyetisyenEkran();
+
+                MessageBox.Show("Diyetisyen girişi yapılıyor.");
+                //Diyetisyen formuna gidildi.
+                formDiyetisyenEkran.Show();
+                this.Hide();
+            }
         }
 
+        //Formun hareket etmesini saglayici degiskenler olusturuldu.
         bool hareket;
         int fare_x, fare_y;
+
+        //Formun hareket etmesini saglayan fonksiyonlar olusturuldu.
         private void frmGirisEkran_MouseDown(object sender, MouseEventArgs e)
         {
             hareket = true;
@@ -82,6 +115,7 @@ namespace YazilimMimarisiOdevi
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
+            //Uygulama kapatildi.
             Application.Exit();
         }
 

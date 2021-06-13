@@ -17,9 +17,9 @@ namespace YazilimMimarisiOdevi
         {
             InitializeComponent();
         }
-        //Veritabanina baglanti kodu olusutruldu.
+        //Veritabanina baglanti kodu olusturuldu.
         SqlConnection con = new SqlConnection(@"Data Source=.\;Initial Catalog=diyUy;Integrated Security=True");
-        //Veritabanina komut yazma kodu olusuturldu.
+        //Veritabanina komut yazma kodu olusturuldu.
         SqlCommand cmd = new SqlCommand();
         //Veritabanindan veri okuma kodu olusturuldu.
         SqlDataReader dr;
@@ -87,16 +87,17 @@ namespace YazilimMimarisiOdevi
             }
             con.Close();
 
-            con.Open();
-            //Hastanin bilgilerini bulan komut yazildi.
+            
+            //Hastanin kisisel bilgilerini bulan komut yazildi.
             cmd.CommandText = "SELECT K.Isim, K.Soyisim, K.TCNo, H.HastalikAdi " +
                               "FROM tblKisi K INNER JOIN tblHastalik H ON K.HastalikID = H.HastalikID " +
                               "WHERE K.KisiID = '" + this.kisiID + "'";
+            con.Open();
             dr = cmd.ExecuteReader();
 
             if(dr.Read())
             {
-                //Hasta bilgileri formda gosterildi.
+                //Hasta kisisel bilgileri formda gosterildi.
                 lblIsimGoster.Text = dr["Isim"].ToString();
                 lblSoyisimGoster.Text = dr["Soyisim"].ToString();
                 lblTCNoGoster.Text = dr["TCNo"].ToString();
@@ -104,11 +105,12 @@ namespace YazilimMimarisiOdevi
             }
             con.Close();
 
-            con.Open();
+            
             //Hastanin diyet bilgilerini bulan komut yazildi.
             cmd.CommandText = "SELECT D.DiyetAdi, DT.DiyetBasTarih, DT.DiyetSonTarih " +
                               "FROM tblDiyetTakvim DT INNER JOIN tblDiyet D ON DT.DiyetID = D.DiyetID " +
                               "WHERE DT.KisiID = '" + this.kisiID + "'";
+            con.Open();
             dr = cmd.ExecuteReader();
 
             if (dr.Read())
@@ -161,9 +163,7 @@ namespace YazilimMimarisiOdevi
             }
             else if(this.diyetID == "2")
             {
-                //Abstract siniftan implementor sinifa erisim saglayan kod yazildi.
                 diyetAbstraction._diyetYontemiImplementor = new GlutenFreeYontemiUygula();
-                //Diyet uygula fonksiyonu gerekli bilgileri alarak override edilmeye gonderildi. 
                 diyetAbstraction.DiyetUygula(new DiyetTakvim
                 {
                     kisiID = this.kisiID,
@@ -173,9 +173,7 @@ namespace YazilimMimarisiOdevi
             }
             else if (this.diyetID == "3")
             {
-                //Abstract siniftan implementor sinifa erisim saglayan kod yazildi.
                 diyetAbstraction._diyetYontemiImplementor = new DenizUrunleriYontemiUygula();
-                //Diyet uygula fonksiyonu gerekli bilgileri alarak override edilmeye gonderildi. 
                 diyetAbstraction.DiyetUygula(new DiyetTakvim
                 {
                     kisiID = this.kisiID,
@@ -185,9 +183,7 @@ namespace YazilimMimarisiOdevi
             }
             else if(this.diyetID == "4")
             {
-                //Abstract siniftan implementor sinifa erisim saglayan kod yazildi.
                 diyetAbstraction._diyetYontemiImplementor = new YesilliklerDunyasiYontemiUygula();
-                //Diyet uygula fonksiyonu gerekli bilgileri alarak override edilmeye gonderildi. 
                 diyetAbstraction.DiyetUygula(new DiyetTakvim
                 {
                     kisiID = this.kisiID,
@@ -211,25 +207,33 @@ namespace YazilimMimarisiOdevi
             formHastaEklemeEkran.Show();
             this.Hide();
         }
-        
+
+        private void btnRaporAl_Click(object sender, EventArgs e)
+        {
+            //Rapor alma formuna gidildi.
+            frmRaporAlEkran formRaporAlEkran = new frmRaporAlEkran();
+            formRaporAlEkran.Show();
+            this.Hide();
+        }
+
         //Formun hareket etmesini saglayici degiskenler olusturuldu.
         bool hareket;
         int fare_x, fare_y;
 
         //Formun hareket etmesini saglayan fonksiyonlar olusturuldu.
-        private void DiyetisyenEkran_MouseDown(object sender, MouseEventArgs e)
+        private void frmDiyetisyenEkran_MouseDown(object sender, MouseEventArgs e)
         {
             hareket = true;
             fare_x = e.X;
             fare_y = e.Y;
         }
 
-        private void DiyetisyenEkran_MouseUp(object sender, MouseEventArgs e)
+        private void frmDiyetisyenEkran_MouseUp(object sender, MouseEventArgs e)
         {
             hareket = false;
         }
 
-        private void DiyetisyenEkran_MouseMove(object sender, MouseEventArgs e)
+        private void frmDiyetisyenEkran_MouseMove(object sender, MouseEventArgs e)
         {
             if (hareket)
                 this.SetDesktopLocation(MousePosition.X - fare_x, MousePosition.Y - fare_y);

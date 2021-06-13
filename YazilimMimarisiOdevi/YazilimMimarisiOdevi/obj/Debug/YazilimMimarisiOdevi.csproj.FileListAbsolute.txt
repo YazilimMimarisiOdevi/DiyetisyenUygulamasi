@@ -49,3 +49,4 @@ C:\Users\becau\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\Yazili
 C:\Users\becau\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.csproj.CoreCompileInputs.cache
 C:\Users\becau\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.exe
 C:\Users\becau\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.pdb
+C:\Users\sekov\Documents\GitHub\DiyetisyenUygulamasi\YazilimMimarisiOdevi\YazilimMimarisiOdevi\obj\Debug\YazilimMimarisiOdevi.frmRaporAlEkran.resources

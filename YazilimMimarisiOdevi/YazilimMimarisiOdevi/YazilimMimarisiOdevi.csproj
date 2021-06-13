@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BridgeTasarimDeseni.cs" />
+    <Compile Include="BuilderTasarimDeseni.cs" />
     <Compile Include="frmAdminEkran.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +72,12 @@
     <Compile Include="frmGirisEkran.Designer.cs">
       <DependentUpon>frmGirisEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRaporAlEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRaporAlEkran.Designer.cs">
+      <DependentUpon>frmRaporAlEkran.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdminEkran.resx">
@@ -84,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGirisEkran.resx">
       <DependentUpon>frmGirisEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRaporAlEkran.resx">
+      <DependentUpon>frmRaporAlEkran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

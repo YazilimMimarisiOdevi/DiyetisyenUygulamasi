@@ -53,7 +53,7 @@ namespace YazilimMimarisiOdevi
             this.btnCikis.Location = new System.Drawing.Point(297, 12);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(34, 34);
-            this.btnCikis.TabIndex = 0;
+            this.btnCikis.TabIndex = 6;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
@@ -83,9 +83,9 @@ namespace YazilimMimarisiOdevi
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSifre.Location = new System.Drawing.Point(104, 260);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.PasswordChar = '*';
+            this.txtSifre.PasswordChar = '●';
             this.txtSifre.Size = new System.Drawing.Size(166, 26);
-            this.txtSifre.TabIndex = 7;
+            this.txtSifre.TabIndex = 4;
             // 
             // lblSifre
             // 
@@ -107,6 +107,7 @@ namespace YazilimMimarisiOdevi
             this.btnDiyetisyenEkleme.TabIndex = 5;
             this.btnDiyetisyenEkleme.Text = "Diyetisyen Ekleme";
             this.btnDiyetisyenEkleme.UseVisualStyleBackColor = false;
+            this.btnDiyetisyenEkleme.Click += new System.EventHandler(this.btnDiyetisyenEkleme_Click);
             // 
             // txtTCNo
             // 
@@ -114,7 +115,7 @@ namespace YazilimMimarisiOdevi
             this.txtTCNo.Location = new System.Drawing.Point(104, 200);
             this.txtTCNo.Name = "txtTCNo";
             this.txtTCNo.Size = new System.Drawing.Size(166, 26);
-            this.txtTCNo.TabIndex = 4;
+            this.txtTCNo.TabIndex = 3;
             // 
             // txtSoyisim
             // 
@@ -122,7 +123,7 @@ namespace YazilimMimarisiOdevi
             this.txtSoyisim.Location = new System.Drawing.Point(104, 140);
             this.txtSoyisim.Name = "txtSoyisim";
             this.txtSoyisim.Size = new System.Drawing.Size(166, 26);
-            this.txtSoyisim.TabIndex = 3;
+            this.txtSoyisim.TabIndex = 2;
             // 
             // txtIsim
             // 
@@ -130,7 +131,7 @@ namespace YazilimMimarisiOdevi
             this.txtIsim.Location = new System.Drawing.Point(104, 80);
             this.txtIsim.Name = "txtIsim";
             this.txtIsim.Size = new System.Drawing.Size(166, 26);
-            this.txtIsim.TabIndex = 2;
+            this.txtIsim.TabIndex = 1;
             // 
             // lblTCNo
             // 
@@ -172,9 +173,9 @@ namespace YazilimMimarisiOdevi
             this.Name = "frmAdminEkran";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminEkran";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminEkran_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminEkran_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminEkran_MouseUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmAdminEkran_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmAdminEkran_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmAdminEkran_MouseUp);
             this.gbxDiyetisyenEkleme.ResumeLayout(false);
             this.gbxDiyetisyenEkleme.PerformLayout();
             this.ResumeLayout(false);

@@ -72,9 +72,9 @@ namespace YazilimMimarisiOdevi
 
     class Diyetisyen : DiyetAbstraction
     {
-        //Veritabanina baglanti kodu olusutruldu.
+        //Veritabanina baglanti kodu olusturuldu.
         SqlConnection con = new SqlConnection(@"Data Source=.\;Initial Catalog=diyUy;Integrated Security=True");
-        //Veritabanina komut yazma kodu olusuturldu.
+        //Veritabanina komut yazma kodu olusturuldu.
         SqlCommand cmd = new SqlCommand();
         //Veritabanindan veri okuma kodu olusturuldu.
         SqlDataReader dr;
@@ -109,7 +109,6 @@ namespace YazilimMimarisiOdevi
                 //Diyet takvim bilgilerini olusturma komutu yazildi.
                 cmd.CommandText = "INSERT INTO tblDiyetTakvim (KisiID, DiyetID, DiyetBasTarih, DiyetSonTarih)" +
                                                      "VALUES (@KisiID,@DiyetID,@DiyetBasTarih,@DiyetSonTarih)";
-
                 con.Open();
                 //Hastanin diyet takvimi bilgileri veritabanina aktarildi.
                 cmd.Parameters.AddWithValue("KisiID", takvim.kisiID);
@@ -148,5 +147,4 @@ namespace YazilimMimarisiOdevi
             }
         }
     }
-
 }

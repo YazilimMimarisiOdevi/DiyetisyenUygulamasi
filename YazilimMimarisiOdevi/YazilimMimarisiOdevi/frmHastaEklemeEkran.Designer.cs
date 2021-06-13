@@ -73,7 +73,7 @@ namespace YazilimMimarisiOdevi
             this.cmbHastalik.Location = new System.Drawing.Point(104, 179);
             this.cmbHastalik.Name = "cmbHastalik";
             this.cmbHastalik.Size = new System.Drawing.Size(234, 28);
-            this.cmbHastalik.TabIndex = 12;
+            this.cmbHastalik.TabIndex = 4;
             this.cmbHastalik.SelectedIndexChanged += new System.EventHandler(this.cmbHastalik_SelectedIndexChanged);
             // 
             // lblHastalik
@@ -92,7 +92,7 @@ namespace YazilimMimarisiOdevi
             this.txtTCNo.Location = new System.Drawing.Point(104, 135);
             this.txtTCNo.Name = "txtTCNo";
             this.txtTCNo.Size = new System.Drawing.Size(234, 26);
-            this.txtTCNo.TabIndex = 10;
+            this.txtTCNo.TabIndex = 3;
             // 
             // btnHastaEkle
             // 
@@ -102,7 +102,7 @@ namespace YazilimMimarisiOdevi
             this.btnHastaEkle.Location = new System.Drawing.Point(245, 224);
             this.btnHastaEkle.Name = "btnHastaEkle";
             this.btnHastaEkle.Size = new System.Drawing.Size(93, 58);
-            this.btnHastaEkle.TabIndex = 3;
+            this.btnHastaEkle.TabIndex = 5;
             this.btnHastaEkle.Text = "Hasta Ekle";
             this.btnHastaEkle.UseVisualStyleBackColor = false;
             this.btnHastaEkle.Click += new System.EventHandler(this.btnHastaEkle_Click);
@@ -113,7 +113,7 @@ namespace YazilimMimarisiOdevi
             this.txtSoyisim.Location = new System.Drawing.Point(104, 91);
             this.txtSoyisim.Name = "txtSoyisim";
             this.txtSoyisim.Size = new System.Drawing.Size(234, 26);
-            this.txtSoyisim.TabIndex = 9;
+            this.txtSoyisim.TabIndex = 2;
             // 
             // txtIsim
             // 
@@ -121,7 +121,7 @@ namespace YazilimMimarisiOdevi
             this.txtIsim.Location = new System.Drawing.Point(104, 44);
             this.txtIsim.Name = "txtIsim";
             this.txtIsim.Size = new System.Drawing.Size(234, 26);
-            this.txtIsim.TabIndex = 8;
+            this.txtIsim.TabIndex = 1;
             // 
             // lblTCNo
             // 
@@ -162,7 +162,7 @@ namespace YazilimMimarisiOdevi
             this.btnCikis.Location = new System.Drawing.Point(361, 12);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(34, 34);
-            this.btnCikis.TabIndex = 4;
+            this.btnCikis.TabIndex = 7;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
@@ -175,7 +175,7 @@ namespace YazilimMimarisiOdevi
             this.btnGeri.Location = new System.Drawing.Point(321, 12);
             this.btnGeri.Name = "btnGeri";
             this.btnGeri.Size = new System.Drawing.Size(34, 34);
-            this.btnGeri.TabIndex = 5;
+            this.btnGeri.TabIndex = 6;
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
@@ -194,9 +194,9 @@ namespace YazilimMimarisiOdevi
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HastaEklemeEkrancs";
             this.Load += new System.EventHandler(this.frmHastaEklemeEkran_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HastaEklemeEkran_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HastaEklemeEkran_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HastaEklemeEkran_MouseUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmHastaEklemeEkran_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmHastaEklemeEkran_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmHastaEklemeEkran_MouseUp);
             this.gbxHastaEkleme.ResumeLayout(false);
             this.gbxHastaEkleme.PerformLayout();
             this.ResumeLayout(false);

@@ -47,7 +47,7 @@ namespace YazilimMimarisiOdevi
             this.btnCikis.Location = new System.Drawing.Point(329, 12);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(34, 34);
-            this.btnCikis.TabIndex = 0;
+            this.btnCikis.TabIndex = 4;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
@@ -81,7 +81,7 @@ namespace YazilimMimarisiOdevi
             this.txtIsim.Location = new System.Drawing.Point(135, 257);
             this.txtIsim.Name = "txtIsim";
             this.txtIsim.Size = new System.Drawing.Size(206, 27);
-            this.txtIsim.TabIndex = 3;
+            this.txtIsim.TabIndex = 1;
             // 
             // txtSifre
             // 
@@ -90,7 +90,7 @@ namespace YazilimMimarisiOdevi
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '●';
             this.txtSifre.Size = new System.Drawing.Size(206, 27);
-            this.txtSifre.TabIndex = 4;
+            this.txtSifre.TabIndex = 2;
             // 
             // btnGiris
             // 
@@ -101,7 +101,7 @@ namespace YazilimMimarisiOdevi
             this.btnGiris.Location = new System.Drawing.Point(243, 400);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(98, 51);
-            this.btnGiris.TabIndex = 5;
+            this.btnGiris.TabIndex = 3;
             this.btnGiris.Text = "Giriş";
             this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
@@ -121,7 +121,7 @@ namespace YazilimMimarisiOdevi
             this.Controls.Add(this.btnCikis);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GirisEkran";
+            this.Name = "frmGirisEkran";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmGirisEkran_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmGirisEkran_MouseMove);

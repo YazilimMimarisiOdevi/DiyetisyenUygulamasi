@@ -17,9 +17,9 @@ namespace YazilimMimarisiOdevi
         {
             InitializeComponent();
         }
-        //Veritabanina baglanti kodu olusutruldu.
+        //Veritabanina baglanti kodu olusturuldu.
         SqlConnection con = new SqlConnection(@"Data Source=.\;Initial Catalog=diyUy;Integrated Security=True");
-        //Veritabanina komut yazma kodu olusuturldu.
+        //Veritabanina komut yazma kodu olusturuldu.
         SqlCommand cmd = new SqlCommand();
         //Veritabanindan veri okuma kodu olusturuldu.
         SqlDataReader dr;
@@ -42,7 +42,7 @@ namespace YazilimMimarisiOdevi
             cmd.Connection = con;
             //Sql'e baglanti acildi.
             con.Open();
-            //Komut calistirildi ve veri okuyucuya esitlendi.x
+            //Komut calistirildi ve veri okuyucuya esitlendi.
             dr = cmd.ExecuteReader();
 
             while(dr.Read())
@@ -123,7 +123,7 @@ namespace YazilimMimarisiOdevi
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hasta ekleme islemi sairasinda bir hata ile karsilasildi.\nError: " + ex.Message);
+                MessageBox.Show("Hasta ekleme islemi sirasinda bir hata ile karsilasildi.\nError: " + ex.Message);
                 throw ex;
             }
         }
@@ -133,19 +133,19 @@ namespace YazilimMimarisiOdevi
         int fare_x, fare_y;
 
         //Formun hareket etmesini saglayan fonksiyonlar olusturuldu.
-        private void HastaEklemeEkran_MouseDown(object sender, MouseEventArgs e)
+        private void frmHastaEklemeEkran_MouseDown(object sender, MouseEventArgs e)
         {
             hareket = true;
             fare_x = e.X;
             fare_y = e.Y;
         }
 
-        private void HastaEklemeEkran_MouseUp(object sender, MouseEventArgs e)
+        private void frmHastaEklemeEkran_MouseUp(object sender, MouseEventArgs e)
         {
             hareket = false;
         }
 
-        private void HastaEklemeEkran_MouseMove(object sender, MouseEventArgs e)
+        private void frmHastaEklemeEkran_MouseMove(object sender, MouseEventArgs e)
         {
             if (hareket)
                 this.SetDesktopLocation(MousePosition.X - fare_x, MousePosition.Y - fare_y);
@@ -164,6 +164,5 @@ namespace YazilimMimarisiOdevi
             //Uygulama kapatildi.
             Application.Exit();
         }
-
     }
 }
